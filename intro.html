@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Crash Course | Selectors</title>
+    <style>
+        body {
+            font-size: 17px;
+            font-family: arial;
+            background: #f4f4f4;
+            line-height: 1.5 cm;
+        }
+
+        header {
+            background: #333;
+            color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>jQuery Crash Course</h1>
+    </header>
+    <div id="container">
+        <h1 id="heading1">Heading One</h1>
+        <p id="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum earum placeat quos rem aut, cumque
+            non. Magni vitae blanditiis molestiae! <span>Lorem ipsum</span> dolor sit amet consectetur adipisicing elit.
+            Blanditiis, voluptas.
+        </p>
+        <h1 class="heading2">Heading Two</h1>
+        <p class="para2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum earum placeat quos rem aut,
+            cumque
+            non. Magni vitae blanditiis molestiae! <span>Lorem ipsum dolor sit </span>amet consectetur adipisicing elit.
+            Blanditiis, voluptas.
+        </p>
+
+        <ul id="list">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+
+        <input type="button" value="Button 1">
+        <input type="submit" value="Submit">
+        <input type="text">
+
+        <a href="http://google.com">Google</a>
+        <a href="http://yahoo.com">Yahoo</a>
+
+    </div>
+
+</body>
+
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+<script>
+    // $('h1').hide();
+    // $('h1#heading1').hide();
+    // $('.heading2').hide();
+
+    // $('p span').css('color', 'red');
+
+    $('ul#list li:first').css('color', 'red');
+    $('ul#list li:last').css('color', 'green');
+    $('ul#list li:even').css('background-color', '#ccc');
+    $('ul#list li:odd').css('background-color', 'yellow');
+    $('ul#list li:nth-child(3n)').css('list-style', 'none');
+
+    // $(':button').hide(); 
+    // $(':submit').hide();
+    // $(':text').hide();
+
+    $('[href]').css('color', 'purple');
+    $('a[href="http://yahoo.com"]').css('color', 'green');
+    // $('*').hide();
+
+</script>
